@@ -1,11 +1,9 @@
-import java.time.LocalDate;
-
 public class Book {
     private String title;
     private String author;
     private String genre;
-    private int pages;
-    private LocalDate date_read;
+    private String pages;
+    private String date_read;
 
     public String getTitle() {
         return title;
@@ -31,19 +29,19 @@ public class Book {
         this.genre = genre;
     }
 
-    public int getPages() {
+    public String getPages() {
         return pages;
     }
 
-    public void setPages(int pages) {
+    public void setPages(String pages) {
         this.pages = pages;
     }
 
-    public LocalDate getDate_read() {
+    public String getDate_read() {
         return date_read;
     }
 
-    public void setDate_read(LocalDate date_read) {
+    public void setDate_read(String date_read) {
         this.date_read = date_read;
     }
 
@@ -53,8 +51,8 @@ public class Book {
                 "title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", genre='" + genre + '\'' +
-                ", pages=" + pages +
-                ", date_read=" + date_read +
+                ", pages='" + pages + '\'' +
+                ", date_read='" + date_read + '\'' +
                 '}';
     }
 }

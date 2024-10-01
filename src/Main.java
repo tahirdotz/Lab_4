@@ -1,15 +1,16 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        CSVBookReader csvBookReader = new CSVBookReader();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        List<Book> books = csvBookReader.readsBook("D:\\test1_OOCII_LAB_3\\Lab_4\\src\\book.csv");
+
+        System.out.println("Number of books: " + books.size());
+
+        System.out.println("Book Titles:");
+        for (Book book : books) {
+            System.out.println(book.getTitle());
         }
     }
 }
